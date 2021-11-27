@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>private advisor</title>
+</head>
+<body>
+
+    <header>
+      <div class="overlay">
+        <div class="top-bar">
+
+            <div class="details">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 col-md-6 contact">
+                      <ul class="list-inline">
+                        <li class="list-inline-item mb-2">
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="13.501" viewBox="0 0 20 13.501">
+                              <path id="Icon_zocial-email" data-name="Icon zocial-email" d="M.072,16.373V5.264q0-.019.058-.366L6.668,10.49.149,16.759a1.635,1.635,0,0,1-.077-.386ZM.94,4.126a.831.831,0,0,1,.328-.058H18.876a1.092,1.092,0,0,1,.347.058L12.666,9.738l-.868.694L10.082,11.84,8.365,10.433,7.5,9.738ZM.959,17.511,7.536,11.2l2.546,2.064L12.627,11.2,19.2,17.511a.926.926,0,0,1-.328.058H1.268a.873.873,0,0,1-.309-.058ZM13.5,10.49,20.014,4.9a1.151,1.151,0,0,1,.058.366V16.373a1.478,1.478,0,0,1-.058.386Z" transform="translate(-0.072 -4.068)" fill="#fff"/>
+                            </svg>                        
+                            Name 12345@gmail.com</span>
+                        </li>
+                        <li class="list-inline-item">
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                              <path id="Icon_awesome-phone-alt" data-name="Icon awesome-phone-alt" d="M19.43,14.133l-4.375-1.875a.938.938,0,0,0-1.094.27L12.023,14.9A14.479,14.479,0,0,1,5.1,7.973L7.469,6.036a.935.935,0,0,0,.27-1.094L5.863.567A.944.944,0,0,0,4.789.024L.727.962A.938.938,0,0,0,0,1.875,18.123,18.123,0,0,0,18.125,20a.938.938,0,0,0,.914-.727l.938-4.063a.949.949,0,0,0-.547-1.078Z" transform="translate(0 0)" fill="#fff"/>
+                            </svg>                        
+                            700 2249 012 +
+                          </span>
+                        </li>
+                      </ul>
+                  </div>
+                  <div class="col-12 col-md-6 location">
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                          <path id="Icon_awesome-location-arrow" data-name="Icon awesome-location-arrow" d="M17.364.138,1.123,7.634a1.894,1.894,0,0,0,.75,3.623H8.744v6.872a1.894,1.894,0,0,0,3.623.75l7.5-16.241a1.949,1.949,0,0,0-2.5-2.5Z" transform="translate(0 0)" fill="#fff"/>
+                        </svg>                    
+                        الرياض, شارع 88, برج الرياض الرئيسى
+                      </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <nav class="navbar navbar-expand-lg">
+              <div class="container">
+
+                <div class="row w-100">
+                  <div class="brand col-lg-2">
+                    <a class="navbar-brand" href="index.html">
+                      <div class="logo-content">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="64" viewBox="0 0 80 64">
+                          <defs>
+                            <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 89 71">
+                              <image width="89" height="71" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFkAAABHCAYAAABs1+tEAAAACXBIWXMAAAsTAAALEwEAmpwYAAAF8WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNi4wLWMwMDIgNzkuMTY0NDg4LCAyMDIwLzA3LzEwLTIyOjA2OjUzICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjIuMCAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDIxLTA5LTAxVDIxOjI5OjMyKzAyOjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIxLTA5LTAxVDIxOjI5OjMyKzAyOjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMS0wOS0wMVQyMToyOTozMiswMjowMCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozMzJiNDBlZS05N2NkLTNhNDgtOWMxYy1hYjY3N2JkYzIyZjIiIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDphZTdmYmRjMy01ZTRkLWQ5NGItOTI2ZC1kM2NjODY0NWViMmYiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpjMzIzODk3My02MmNhLThjNDgtODc0Mi1kZmE5ODk3NzAyOTMiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiBwaG90b3Nob3A6SUNDUHJvZmlsZT0ic1JHQiBJRUM2MTk2Ni0yLjEiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmMzMjM4OTczLTYyY2EtOGM0OC04NzQyLWRmYTk4OTc3MDI5MyIgc3RFdnQ6d2hlbj0iMjAyMS0wOS0wMVQyMToyOTozMiswMjowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIyLjAgKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDozMzJiNDBlZS05N2NkLTNhNDgtOWMxYy1hYjY3N2JkYzIyZjIiIHN0RXZ0OndoZW49IjIwMjEtMDktMDFUMjE6Mjk6MzIrMDI6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyMi4wIChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5RuDjfAAAIgklEQVR4nO2cf4xdRRXHP1O2pSCVZilFXKGXSIVUQH60SqWCKMS91mIDYrDywwT/UEAJg8qPpAS0+APYqzaRQIrYGm0jClilTFEDBhsQiXQxmmJFmNK4RaFloSuU/tjnHzPPfcze9/bN3Dtv3272m7y8N3PvnJn97twz58w5cwUe0EpOAX7i02YcYl2SZqt8GnR4drAfcL5nm/GGbYAXyZMiDWQCNZgguQWYILkF8NXJeZgJvFKCnHbFMuCaIgLKIHkgSbO9JchpS2glXy0qY0Jd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"/>
+                            </pattern>
+                          </defs>
+                          <rect id="Untitled-1" width="80" height="64" fill="url(#pattern)"/>
+                        </svg>
+                        
+                      </div>
+                      <div class="logo-text">
+                        <h4 class="title">مستشارك الخاص</h4>
+                        <hr>
+                        <h6>عشرين عاما من الخبرة والتميز</h6>
+                      </div>
+                    </a>
+                    <div class="search-box d-lg-none">
+                      <div class="search-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17.974" height="17.974" viewBox="0 0 17.974 17.974">
+                          <g id="Icon_feather-search" data-name="Icon feather-search" transform="translate(-4 -4)">
+                            <path id="Path_23638" data-name="Path 23638" d="M19.4,11.952A7.452,7.452,0,1,1,11.952,4.5,7.452,7.452,0,0,1,19.4,11.952Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                            <path id="Path_23639" data-name="Path 23639" d="M29.027,29.027l-4.052-4.052" transform="translate(-7.76 -7.76)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="nav-list col-lg-5 offset-lg-4">
+                      <!-- Lists -->
+                      <ul class="navbar-nav list-inline">
+                        <li class="list-inline-item"><a href="#" class="nav-link active">الرئيسية</a></li>
+                        <li class="list-inline-item"><a href="#about-us" class="nav-link">من نحن</a></li>
+                        <li class="list-inline-item"><a href="#our-features" class="nav-link">قيمنا</a></li>
+                        <li class="list-inline-item"><a href="#statistics" class="nav-link">شركاؤنا</a></li>
+                        <li class="list-inline-item"><a href="#contact-us" class="nav-link">اتصل بنا</a></li>
+                      </ul>
+                  </div>
+
+                  <div class="col-1 d-none d-lg-block">
+                      <div class="search-box">
+                        <div class="search-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17.974" height="17.974" viewBox="0 0 17.974 17.974">
+                            <g id="Icon_feather-search" data-name="Icon feather-search" transform="translate(-4 -4)">
+                              <path id="Path_23638" data-name="Path 23638" d="M19.4,11.952A7.452,7.452,0,1,1,11.952,4.5,7.452,7.452,0,0,1,19.4,11.952Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                              <path id="Path_23639" data-name="Path 23639" d="M29.027,29.027l-4.052-4.052" transform="translate(-7.76 -7.76)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+
+              </div>
+            </nav>
+        </div>
+        <hr class="navbar-bottom-line">
+
+        <div id="carousel-banner" class="carousel slide" data-ride="carousel">
+          <div class="container">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-4 offset-lg-1 d-none d-md-block">
+                    <img src="img/person.png" alt="person image">
+                  </div>
+                  <div class="center-content col-md-5">
+                    <div class="content-banner">
+                      <h4 class="title-section title-left-line">مرحبا بك في موقع مستشارك الخاص</h4>
+                      <p class="banner-desc">
+                        جميع الحلول القانونية متوفرة لدينا لحل حميع
+                        القضايا بخبرة كبيرة تفوق 20 عاما   
+                      </p>
+                      <div class="btns">
+                        <button class="btn primary-btn">أكتشف المزيد</button>
+                        <button class="watch-video-btn">
+                          <div class="icon-play">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="18" viewBox="0 0 13 18">
+                                <path id="Polygon_2" data-name="Polygon 2" d="M6.533,3.563a3,3,0,0,1,4.933,0l3.274,4.73A3,3,0,0,1,12.274,13H5.726A3,3,0,0,1,3.259,8.292Z" transform="translate(13) rotate(90)" fill="#d2a76b"/>
+                              </svg>                              
+                          </div>
+                        </button>
+                        <h5>شاهد فيديو</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>        
+          </div>
+          <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#carousel-banner" data-bs-slide="prev">
+            <a href="#">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+          </button>
+          <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carousel-banner" data-bs-slide="next">
+            <a href="#">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>          
+            </a>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <div id="about-us">
+      <div class="container">
+        <div class="about-title-section">
+          <h4 class="title-section title-left-line">من نحن</h4>
+          <p class="section-description title-under-line">
+            نتمتع بسمعة طيبة .. واحترام كبير في القطاع <span>المهني.</span>  
+          </p>
+        </div>
+        <div class="card-content">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card-template card-about">
+                <div class="icon-content">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24.615" height="32" viewBox="0 0 24.615 32">
+                    <g id="noun_summary_3082156" transform="translate(-13.6 -2.6)">
+                      <g id="Group_16977" data-name="Group 16977" transform="translate(13.6 2.6)">
+                        <path id="Path_23581" data-name="Path 23581" d="M31.307,11.434H42.2a.753.753,0,0,0,.707-.781V7.248a.753.753,0,0,0-.707-.781H40.366V6.4a3.784,3.784,0,0,0-3.6-3.8,3.784,3.784,0,0,0-3.6,3.8v.071H31.307a.753.753,0,0,0-.707.781v3.406A.753.753,0,0,0,31.307,11.434Zm5.461-6.493a1.52,1.52,0,0,1,1.446,1.6,1.453,1.453,0,1,1-2.891,0A1.543,1.543,0,0,1,36.768,4.942Z" transform="translate(-24.568 -2.6)" fill="#d2a76b"/>
+                        <path id="Path_23582" data-name="Path 23582" d="M36.462,20H34v1.733a2.461,2.461,0,0,1-2.462,2.433H20.108a2.461,2.461,0,0,1-2.462-2.433V20H15.32a1.717,1.717,0,0,0-1.72,1.7V44.127a1.717,1.717,0,0,0,1.72,1.7H36.5a1.717,1.717,0,0,0,1.72-1.7V21.7A1.769,1.769,0,0,0,36.462,20ZM33.023,40.528a.565.565,0,0,1-.573.567H19.332a.565.565,0,0,1-.573-.567v-.966A.565.565,0,0,1,19.332,39H32.416a.565.565,0,0,1,.573.567v.966Zm0-5.365a.565.565,0,0,1-.573.567H19.332a.565.565,0,0,1-.573-.567V34.2a.565.565,0,0,1,.573-.567H32.416a.565.565,0,0,1,.573.567v.966Zm0-5.365a.565.565,0,0,1-.573.567H19.332a.565.565,0,0,1-.573-.567v-.966a.565.565,0,0,1,.573-.567H32.416a.565.565,0,0,1,.573.567V29.8Z" transform="translate(-13.6 -13.827)" fill="#d2a76b"/>
+                      </g>
+                    </g>
+                  </svg>                  
+                </div>
+                <h4 class="title-under-line">نظرة عامة</h4>
+                <p>
+                  تاريخنــا حافــل بتقديــم منظومــات  مميزة مـن الحلـول
+                  المبتكـرة للكيانـات الرائــدة مــن شــركات ...
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card-template card-about">
+                <div class="icon-content">
+                  <svg id="Group_16978" data-name="Group 16978" xmlns="http://www.w3.org/2000/svg" width="27.222" height="34.274" viewBox="0 0 27.222 34.274">
+                    <path id="Path_23583" data-name="Path 23583" d="M36.585,23.375H34.364V22.336a1,1,0,0,0-1.008-.859V11.948a1.568,1.568,0,0,0-3.136,0v9.529a1,1,0,0,0-1.008.859v1.039H26.99a.925.925,0,0,0-.924.924v6.107a.925.925,0,0,0,.924.924h9.6a.924.924,0,0,0,.924-.924V24.3A.925.925,0,0,0,36.585,23.375Zm-3.166,0H30.154v-.78a.447.447,0,0,1,.246-.385,1.568,1.568,0,0,0,2.773,0,.446.446,0,0,1,.246.385v.78ZM12.041,3.461A3.461,3.461,0,1,1,15.5,6.922,3.461,3.461,0,0,1,12.041,3.461Zm16.286,0a3.461,3.461,0,1,1,3.461,3.461A3.461,3.461,0,0,1,28.326,3.461Zm-3.66,11.433a1.488,1.488,0,0,1-1.487,1.488h-5.53a1.489,1.489,0,0,1-1.217-.631l-2.764-3.927A1.488,1.488,0,0,1,16.1,10.111l2.319,3.3h4.758A1.488,1.488,0,0,1,24.667,14.894ZM20.761,32.076a1.862,1.862,0,0,1-3.663.672L15.54,23.343l-1.558,9.405a1.862,1.862,0,0,1-3.663-.672l1.6-9.661,0-11.24a3.547,3.547,0,0,1,7.095,0v1.883h-.221L16.554,9.815a2,2,0,0,0-2.867-.385,1.868,1.868,0,0,0-.4,2.731L16,16.119a1.851,1.851,0,0,0,1.647.834h1.54s0,5.627,0,5.627ZM28.1,16.382H24.569a1.962,1.962,0,0,0,0-2.976H28.1V11.174a3.541,3.541,0,1,1,7.081,0l0,11.845H34.72v-.682a1.218,1.218,0,0,0-.741-1.119V11.891a2.192,2.192,0,1,0-4.385,0v9.326a1.218,1.218,0,0,0-.741,1.119v.682H28.1ZM26.99,31.688h3.3l-.175,1.06a1.862,1.862,0,0,1-3.663-.672l.078-.474A1.271,1.271,0,0,0,26.99,31.688Zm9.905.388a1.862,1.862,0,0,1-3.663.672l-.176-1.06h3.529a1.272,1.272,0,0,0,.241-.023Z" transform="translate(-10.288)" fill="#fff"/>
+                  </svg>                  
+                </div>
+                <h4 class="title-under-line">تعامل مباشر</h4>
+                <p>
+                  تاريخنــا حافــل بتقديــم منظومــات  مميزة مـن الحلـول
+                  ...المبتكـرة للكيانـات الرائــدة مــن شــركات
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card-template card-about">
+                <div class="icon-content">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 28 32">
+                    <g id="noun_Light_1570737" transform="translate(-8 -2)">
+                      <g id="Group_10344" data-name="Group 10344" transform="translate(8 2)">
+                        <path id="Path_18962" data-name="Path 18962" d="M22,954.362a.667.667,0,0,0-.667.667V957.7a.667.667,0,1,0,1.333,0v-2.667A.667.667,0,0,0,22,954.362Zm-9.427,3.906A.667.667,0,0,0,12.1,959.4l1.885,1.885a.663.663,0,1,0,.937-.938l-1.885-1.885A.661.661,0,0,0,12.573,958.268Zm18.854,0a.661.661,0,0,0-.469.2l-1.885,1.885a.663.663,0,0,0,.937.938L31.9,959.4a.667.667,0,0,0-.469-1.135ZM22,960.362c-4.065,0-8,3.154-8,7.615,0,5.788,4.333,7,4.333,11.052h7.333c0-4.052,4.333-5.264,4.333-11.052,0-4.461-3.935-7.615-8-7.615Zm-2.052,2.021h.062a.667.667,0,0,1,.229,1.292,5.01,5.01,0,0,0-3.156,3.8.667.667,0,1,1-1.313-.24,6.313,6.313,0,0,1,3.99-4.8.664.664,0,0,1,.188-.052ZM8.667,967.7a.667.667,0,1,0,0,1.333h2.667a.667.667,0,1,0,0-1.333Zm24,0a.667.667,0,1,0,0,1.333h2.667a.667.667,0,1,0,0-1.333ZM18.333,980.362V981.7h7.333v-1.333Zm0,2.667a1.335,1.335,0,0,0,1.333,1.333h4.667a1.335,1.335,0,0,0,1.333-1.333Zm2.333,2a1.333,1.333,0,0,0,2.667,0Z" transform="translate(-8 -954.362)" fill="#d2a76b"/>
+                      </g>
+                    </g>
+                  </svg>                  
+                </div>
+                <h4 class="title-under-line">الرؤيا والرسالة</h4>
+                <p>
+                  تاريخنــا حافــل بتقديــم منظومــات  مميزة مـن الحلـول
+                  ...المبتكـرة للكيانـات الرائــدة مــن شــركات
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="our-features">
+      <div class="container">
+        <div class="title-content">
+          <h4 class="title-section title-double-line">قيمنا</h4>
+          <p class="section-description">
+            مايميزنا عن غيرنا
+          </p>
+        </div>
+        <div class="card-content">
+          <div class="row">
+            <div class="col-md-6 col-lg-4">
+              <div class="card-template our-features-card">
+                <span class="card-num">01</span>
+                <div class="icon-content">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="31.837" height="32" viewBox="0 0 31.837 32">
+                    <g id="noun_integrity_1757008" transform="translate(0 0.199)">
+                      <ellipse id="Ellipse_971" data-name="Ellipse 971" cx="6.211" cy="6.599" rx="6.211" ry="6.599" transform="translate(7.664 -0.199)" fill="#d2a76b"/>
+                      <path id="Path_23617" data-name="Path 23617" d="M72.473,56.682h-.022a.444.444,0,0,0-.443.419,17.559,17.559,0,0,0,.6,4.962c.951,3.5,2.927,5.91,5.713,6.969a.452.452,0,0,0,.16.029.447.447,0,0,0,.114-.015,7.678,7.678,0,0,0,3.266-2.125c1.459-1.523,3.218-4.42,3.317-9.57a.442.442,0,0,0-.382-.445c-.039-.006-3.952-.589-5.867-2.756A.449.449,0,0,0,78.6,54h-.015a.448.448,0,0,0-.318.137c-.024.026-2.491,2.55-5.558,2.55C72.632,56.688,72.553,56.686,72.473,56.682ZM75.421,61a.471.471,0,0,1,.665-.023l1.671,1.561L81.1,59.534a.471.471,0,1,1,.63.7l-3.661,3.295a.471.471,0,0,1-.636-.006l-1.987-1.855A.471.471,0,0,1,75.421,61Z" transform="translate(-53.342 -39.614)" fill="#d2a76b"/>
+                      <path id="Path_23618" data-name="Path 23618" d="M2.363,68.464H26.178a2.294,2.294,0,0,0,2.364-2.215v-1A8.822,8.822,0,0,1,25.3,67.006a1.572,1.572,0,0,1-.9-.045,10.751,10.751,0,0,1-6.688-7.6,17.533,17.533,0,0,1-.673-5.255,1.434,1.434,0,0,1,1.472-1.314l.067,0c.071,0,.141,0,.211,0a7.508,7.508,0,0,0,3.925-1.3,14.02,14.02,0,0,0-3.28-1.353,8.114,8.114,0,0,1-10.313,0C4.016,51.528,0,55.649,0,60.88v5.369A2.293,2.293,0,0,0,2.363,68.464Zm5.4-14.826a.472.472,0,1,1-.5.471A.486.486,0,0,1,7.761,53.638ZM3.505,60.276a7.2,7.2,0,0,1,2.426-5.328.523.523,0,0,1,.708.008.451.451,0,0,1-.009.666,6.292,6.292,0,0,0-2.124,4.654v3.932c0,.356.045.436.054.448a1.357,1.357,0,0,0,.464.043h7.494a.472.472,0,1,1,0,.941H5.024c-1.107,0-1.519-.388-1.519-1.432Z" transform="translate(0 -36.663)" fill="#d2a76b"/>
+                    </g>
+                  </svg>                                   
+                </div>
+                <h4 class="title-under-line">نظرة عامة</h4>
+                <p>
+                  تاريخنــا حافــل بتقديــم منظومــات  مميزة مـن الحلـول
+                  المبتكـرة للكيانـات الرائــدة مــن شــركات ...
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card-template our-features-card">
+                <span class="card-num">02</span>
+                <div class="icon-content">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="30.837" viewBox="0 0 32 30.837">
+                    <g id="noun_deadline_3188929" transform="translate(-32 -32)">
+                      <path id="Path_23625" data-name="Path 23625" d="M306.193,34.193V32H304v2.255a9.8,9.8,0,0,1,1.1-.062Z" transform="translate(-253.272)" fill="#d2a76b"/>
+                      <path id="Path_23626" data-name="Path 23626" d="M353.1,33.1A1.1,1.1,0,0,0,352,32v2.193A1.1,1.1,0,0,0,353.1,33.1Z" transform="translate(-297.97)" fill="#d2a76b"/>
+                      <circle id="Ellipse_974" data-name="Ellipse 974" cx="0.5" cy="0.5" r="0.5" transform="translate(36 42.755)" fill="#d2a76b"/>
+                      <path id="Path_23627" data-name="Path 23627" d="M153.22,46.662l1.09.953a9.679,9.679,0,0,1-.658-3.551,9.884,9.884,0,0,1,7.677-9.624V32H158.95a1.644,1.644,0,0,0-1.165.48L153.254,37a1.644,1.644,0,0,1-1.165.48H152v8.774h.137A1.657,1.657,0,0,1,153.22,46.662Z" transform="translate(-111.726)" fill="#d2a76b"/>
+                      <path id="Path_23628" data-name="Path 23628" d="M401.1,146.193h3.29a1.1,1.1,0,0,0,0-2.193H401.1a1.1,1.1,0,1,0,0,2.193Z" transform="translate(-342.642 -104.288)" fill="#d2a76b"/>
+                      <path id="Path_23629" data-name="Path 23629" d="M409.1,98.193h1.1a1.1,1.1,0,0,0,0-2.193h-1.1a1.1,1.1,0,1,0,0,2.193Z" transform="translate(-350.094 -59.613)" fill="#d2a76b"/>
+                      <path id="Path_23630" data-name="Path 23630" d="M194.549,94.836l-.007.007a8.769,8.769,0,0,0,12.4.062,8.866,8.866,0,0,0,.679-.754h-2.468a2.194,2.194,0,0,1-.727-4.263,2.2,2.2,0,0,1,.6-3.043,2.265,2.265,0,0,1,.5-.247,2.2,2.2,0,0,1,.6-3.043c.034-.021.062-.041.1-.062a2.186,2.186,0,0,1-.425-2.022,8.77,8.77,0,0,0-11.344,13.27Zm5.669-6.4v-6.9h1.1v7.355l-3.448,3.448-.775-.775Z" transform="translate(-148.935 -44.603)" fill="#d2a76b"/>
+                      <path id="Path_23631" data-name="Path 23631" d="M54.032,112H51.839v3.29h-1.1V112H48v8.774h6.032Zm-2.742,7.677a1.645,1.645,0,1,1,1.645-1.645A1.641,1.641,0,0,1,51.29,119.677Z" transform="translate(-14.903 -74.484)" fill="#d2a76b"/>
+                      <path id="Path_23632" data-name="Path 23632" d="M369.1,240a1.1,1.1,0,1,0,0,2.193h3.29a1.1,1.1,0,0,0,0-2.193Z" transform="translate(-312.835 -193.678)" fill="#d2a76b"/>
+                      <path id="Path_23633" data-name="Path 23633" d="M384,193.1a1.1,1.1,0,0,0,1.1,1.1h3.29a1.1,1.1,0,0,0,0-2.193H385.1A1.1,1.1,0,0,0,384,193.1Z" transform="translate(-327.739 -148.983)" fill="#d2a76b"/>
+                      <path id="Path_23634" data-name="Path 23634" d="M42.419,313.1H40.774V312h-1.1v1.1H35.29V312h-1.1v1.1H32.548a.55.55,0,0,0-.548.548v1.1H42.967v-1.1A.55.55,0,0,0,42.419,313.1Z" transform="translate(0 -260.719)" fill="#d2a76b"/>
+                      <path id="Path_23635" data-name="Path 23635" d="M32,375.129a.55.55,0,0,0,.548.548h9.87a.55.55,0,0,0,.548-.548V368H32Zm8.225-6.032h1.1v1.1h-1.1Zm0,2.193h1.1v1.1h-1.1Zm0,2.193h1.1v1.1h-1.1ZM38.032,369.1h1.1v1.1h-1.1Zm0,2.193h1.1v1.1h-1.1Zm0,2.193h1.1v1.1h-1.1ZM35.839,369.1h1.1v1.1h-1.1Zm0,2.193h1.1v1.1h-1.1Zm0,2.193h1.1v1.1h-1.1ZM33.645,369.1h1.1v1.1h-1.1Zm0,2.193h1.1v1.1h-1.1Zm0,2.193h1.1v1.1h-1.1Z" transform="translate(0 -312.84)" fill="#d2a76b"/>
+                      <path id="Path_23636" data-name="Path 23636" d="M238.794,277.232l-1.008-.432a12.07,12.07,0,0,1-15.834,6.382,12.669,12.669,0,0,1-1.577-.809l-.576.932a13.154,13.154,0,0,0,18.994-6.073Z" transform="translate(-174.794 -227.923)" fill="#d2a76b"/>
+                      <path id="Path_23637" data-name="Path 23637" d="M233.655,366.075a15.4,15.4,0,0,1-12.5-.089l-.452,1a16.448,16.448,0,0,0,18.72-3.633l-.8-.754A15.352,15.352,0,0,1,233.655,366.075Z" transform="translate(-175.632 -307.81)" fill="#d2a76b"/>
+                    </g>
+                  </svg>                                                    
+                </div>
+                <h4 class="title-under-line">المسئولية</h4>
+                <p>
+                  تاريخنــا حافــل بتقديــم منظومــات  مميزة مـن الحلـول
+                  المبتكـرة للكيانـات الرائــدة مــن شــركات ...
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card-template our-features-card">
+                <span class="card-num">03</span>
+                <div class="icon-content">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25.455" height="32" viewBox="0 0 25.455 32">
+                    <g id="noun_Fist_34372" transform="translate(-14.204 -5)">
+                      <g id="Group_17010" data-name="Group 17010" transform="translate(14.204 5)">
+                        <path id="Path_23596" data-name="Path 23596" d="M31.41,24.053h4.862a7.922,7.922,0,0,1-2.969,5.9L33.853,37H16.973l.229-7.045c-3.524-2.6-2.967-7.418-2.967-7.418V17.981a3.57,3.57,0,0,0,5.377-.709,3.576,3.576,0,0,0,5.99,0,3.6,3.6,0,0,0,1.458,1.271,4.4,4.4,0,0,0-.126,1.035A4.479,4.479,0,0,0,31.41,24.053Zm.772-8.949H36.36a4.341,4.341,0,0,1,.638.051V7.407a2.408,2.408,0,0,0-4.816,0Zm-4.7,2.338a4.482,4.482,0,0,1,3.527-2.318V7.407a2.408,2.408,0,0,0-4.815,0v7.9A2.41,2.41,0,0,0,27.48,17.442Zm-2.464-2.13v-7.9a2.408,2.408,0,0,0-4.815,0v7.9a2.408,2.408,0,1,0,4.815,0Zm-5.991,0V9.975a2.407,2.407,0,1,0-4.815,0v5.336a2.407,2.407,0,1,0,4.815,0Zm17.335.967H31.41a3.3,3.3,0,0,0,0,6.6h4.95a3.3,3.3,0,0,0,0-6.6Z" transform="translate(-14.204 -5)" fill="#d2a76b"/>
+                      </g>
+                    </g>
+                  </svg>                                                    
+                </div>
+                <h4 class="title-under-line">الشجاعة</h4>
+                <p>
+                  تاريخنــا حافــل بتقديــم منظومــات  مميزة مـن الحلـول
+                  المبتكـرة للكيانـات الرائــدة مــن شــركات ...
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card-template our-features-card">
+                <span class="card-num">04</span>
+                <div class="icon-content">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="30.66" viewBox="0 0 32 30.66">
+                    <g id="noun_motivation_2079080" transform="translate(-2.45 -3.129)">
+                      <g id="Group_17013" data-name="Group 17013" transform="translate(2.45 3.129)">
+                        <path id="Path_23619" data-name="Path 23619" d="M9.533,29.351l2.138-2.205a1.868,1.868,0,0,1,.78-.475.991.991,0,0,1,.305-.068l-1.8,3.223a2.605,2.605,0,0,0-.2,2.07,2.657,2.657,0,0,0,1.255,1.527L7.531,41.4a1.556,1.556,0,0,0,.611,2.1,1.461,1.461,0,0,0,1.052.17,1.525,1.525,0,0,0,1.052-.78l4.513-8.075,1.663.814-.305,4.648a1.557,1.557,0,0,0,1.459,1.663,1.652,1.652,0,0,0,.407-.034,1.589,1.589,0,0,0,1.255-1.425l.339-4.954a2.639,2.639,0,0,0-1.459-2.545l-1.832-.848,1.7-3.054c.034.1.068.2.1.339a3.247,3.247,0,0,0,1.73,1.934l2.511,1.154a1.241,1.241,0,0,0,.848.1,1.254,1.254,0,0,0,.95-.746,1.353,1.353,0,0,0-.645-1.8L20.967,28.91a.607.607,0,0,1-.305-.339C19.406,24.7,19,24.4,18.354,24.16l-2.07-.746c-.407-.136-.78-.271-4.513.679A4.545,4.545,0,0,0,9.7,25.279L7.565,27.485a1.356,1.356,0,0,0,1.968,1.866Z" transform="translate(-5.58 -16.707)" fill="#d2a76b"/>
+                        <circle id="Ellipse_972" data-name="Ellipse 972" cx="2.986" cy="2.986" r="2.986" transform="translate(9.319 5.514) rotate(-67.43)" fill="#d2a76b"/>
+                        <path id="Path_23620" data-name="Path 23620" d="M33.305,72.072,3.14,77.873a.856.856,0,0,0,.168,1.7H33.474a.981.981,0,0,0,.976-.984V73.022A.978.978,0,0,0,33.305,72.072Z" transform="translate(-2.45 -48.91)" fill="#d2a76b"/>
+                        <path id="Path_23621" data-name="Path 23621" d="M66.032,23.282H67.9a.413.413,0,0,1,.407.407L68,28.609a.756.756,0,0,0,1.391.441l4.954-8.143a.737.737,0,0,0-.645-1.12H71.834a.413.413,0,0,1-.407-.407l.305-4.92a.756.756,0,0,0-1.391-.441l-4.954,8.143A.743.743,0,0,0,66.032,23.282Z" transform="translate(-44.211 -10.093)" fill="#d2a76b"/>
+                      </g>
+                    </g>
+                  </svg>                                                    
+                </div>
+                <h4 class="title-under-line">التحفيز</h4>
+                <p>
+                  تاريخنــا حافــل بتقديــم منظومــات  مميزة مـن الحلـول
+                  المبتكـرة للكيانـات الرائــدة مــن شــركات ...
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card-template our-features-card">
+                <span class="card-num">05</span>
+                <div class="icon-content">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32.1" height="28" viewBox="0 0 32.1 28">
+                    <g id="noun_motivation_4065801" transform="translate(-2 -6.821)">
+                      <circle id="Ellipse_973" data-name="Ellipse 973" cx="3" cy="3" r="3" transform="translate(15 6.821)" fill="#d2a76b"/>
+                      <path id="Path_23622" data-name="Path 23622" d="M9.49,29.494H4.675a2.675,2.675,0,0,0,0,5.35h7.49v-1.07H4.675a1.605,1.605,0,0,1,0-3.21H9.49a2.675,2.675,0,1,0,0-5.35H4.675a1.605,1.605,0,0,1,0-3.21h3.21a.535.535,0,0,0,.535-.535V17.692A5.27,5.27,0,0,0,11.1,16.654l-4.317-1.84a2.574,2.574,0,1,1,1.969-4.756s4.28,1.5,4.441,1.557a5.35,5.35,0,1,0-5.837,6.11v3.21H4.675a2.675,2.675,0,0,0,0,5.35H9.49a1.605,1.605,0,1,1,0,3.21Z" transform="translate(0 -0.024)" fill="#d2a76b"/>
+                      <path id="Path_23623" data-name="Path 23623" d="M44.8,26.283h4.815a2.675,2.675,0,1,0,0-5.35H46.936v-3.21a5.35,5.35,0,1,0-5.826-6.1c.171-.053,4.478-1.568,4.478-1.568a2.541,2.541,0,0,1,2.359.273,2.573,2.573,0,0,1-.428,4.494l-4.328,1.835a5.286,5.286,0,0,0,2.675,1.027v3.788A.535.535,0,0,0,46.4,22h3.21a1.605,1.605,0,0,1,0,3.21H44.8a2.675,2.675,0,1,0,0,5.35h4.815a1.605,1.605,0,0,1,0,3.21h-7.49v1.07h7.49a2.675,2.675,0,1,0,0-5.35H44.8a1.605,1.605,0,0,1,0-3.21Z" transform="translate(-18.186 -0.023)" fill="#d2a76b"/>
+                      <path id="Path_23624" data-name="Path 23624" d="M33.558,15.844a1.5,1.5,0,0,0-2.06-1.4l-3.97,1.412a17.12,17.12,0,0,1-11.481,0l-3.97-1.412a1.5,1.5,0,0,0-1.15,2.777l5.944,2.547a1.07,1.07,0,0,1,.637.963V36.527a1.669,1.669,0,0,0,1.723,1.707,1.6,1.6,0,0,0,1.487-1.6v-8.56a1.07,1.07,0,0,1,2.14,0v8.437A1.68,1.68,0,0,0,24.6,38.233a1.605,1.605,0,0,0,1.471-1.605V20.75a1.07,1.07,0,0,1,.647-.984l5.933-2.541A1.5,1.5,0,0,0,33.558,15.844Z" transform="translate(-3.738 -3.413)" fill="#d2a76b"/>
+                    </g>
+                  </svg>                                                    
+                </div>
+                <h4 class="title-under-line">الإستقلالية</h4>
+                <p>
+                  تاريخنــا حافــل بتقديــم منظومــات  مميزة مـن الحلـول
+                  المبتكـرة للكيانـات الرائــدة مــن شــركات ...
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card-template our-features-card">
+                <span class="card-num">06</span>
+                <div class="icon-content">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="37.182" height="24.75" viewBox="0 0 37.182 24.75">
+                    <g id="noun_commitment_3672040" transform="translate(-5 -13.359)">
+                      <path id="Path_23601" data-name="Path 23601" d="M20.053,18.179H14.27L11.43,27.61A86.451,86.451,0,0,0,24.505,39.191a.874.874,0,0,0,1.146-.089.912.912,0,0,0,0-1.273L24.1,36.266,22.324,34.48a.745.745,0,0,1,0-1.05.733.733,0,0,1,1.043,0L27.5,37.591a1.155,1.155,0,0,0,1.627,0,1.171,1.171,0,0,0,.015-1.63l-3.653-3.8a.754.754,0,0,1,.022-1.057.733.733,0,0,1,1.043.022l.584.6,3.069,3.2.821.849a1.212,1.212,0,0,0,2.078-.819,1.24,1.24,0,0,0-.37-.9L30,31.383l-1.8-1.757a.738.738,0,0,1-.015-1.049.727.727,0,0,1,1.043-.015l5.3,5.158a1.113,1.113,0,0,0,1.575-.007,1.089,1.089,0,0,0,.34-.826,1.128,1.128,0,0,0-.37-.819L26.036,22.831A6.9,6.9,0,0,0,22.9,24.737a.545.545,0,0,1-.141.119c-2.751,1.794-4.371.342-4.437.283-1.457-1.332-.762-3.431-.126-4.466A15.636,15.636,0,0,1,20.053,18.179Z" transform="translate(-1.675 -1.255)" fill="#d2a76b"/>
+                      <path id="Path_23602" data-name="Path 23602" d="M29.939,15.982a3.331,3.331,0,0,0-2.389-.052A10.9,10.9,0,0,0,22.1,20.8c-.015.022-1.05,1.738-.133,2.566.022.022.873.688,2.566-.385a7.8,7.8,0,0,1,4.326-2.33.737.737,0,0,1,.569.192l10.28,9.415c.007,0,.007,0,.007.007a3.14,3.14,0,0,0,1.694-1.309L37.786,19.1Z" transform="translate(-4.116 -0.618)" fill="#d2a76b"/>
+                      <path id="Path_23603" data-name="Path 23603" d="M51.6,15.968a22.1,22.1,0,0,0-6.042,1.146.846.846,0,0,0-.444,1.065L49.49,30.072a.867.867,0,0,0,.8.555h1.361a.761.761,0,0,0,.762-.762V16.723A.75.75,0,0,0,51.6,15.968Z" transform="translate(-10.229 -0.679)" fill="#d2a76b"/>
+                      <path id="Path_23604" data-name="Path 23604" d="M5.762,28.054H7.049a.841.841,0,0,0,.814-.6l3.587-11.863A.847.847,0,0,0,11,14.572a14.417,14.417,0,0,0-5.206-1.213A.758.758,0,0,0,5,14.121V27.292A.761.761,0,0,0,5.762,28.054Z" fill="#d2a76b"/>
+                    </g>
+                  </svg>                                                    
+                </div>
+                <h4 class="title-under-line">العزيمة والإلتزام</h4>
+                <p>
+                  تاريخنــا حافــل بتقديــم منظومــات  مميزة مـن الحلـول
+                  المبتكـرة للكيانـات الرائــدة مــن شــركات ...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="statistics">
+      <div class="overlay">
+        <div class="content">
+          <div class="container">
+            <div class="title-content title-content-center">
+              <h4 class="title-section title-double-line">لماذا نحن</h4>
+              <p class="section-description">
+                لماذا نحن الأفضل
+              </p>
+            </div>
+            <div class="statistic-content">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="statistic">
+                    <div class="icon-content">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="46.675" height="41.343" viewBox="0 0 46.675 41.343">
+                        <g id="Group_9458" data-name="Group 9458" transform="translate(-2.474 -7.9)">
+                          <path id="Path_18460" data-name="Path 18460" d="M27.97,39.679,29,36.978a.872.872,0,0,0-.835-1.178h-19a5.95,5.95,0,0,0-5.892,5.3l-.786,7.218a1.367,1.367,0,0,0,1.08,1.522c.786.147,1.817.295,2.9.393l.687,11.49a1.793,1.793,0,0,0,1.817,1.719h5.548a1.793,1.793,0,0,0,1.817-1.719l.933-19.689a1.8,1.8,0,0,1,1.817-1.768h8.053A.9.9,0,0,0,27.97,39.679Z" transform="translate(0 -14.201)" fill="#fff"/>
+                          <circle id="Ellipse_542" data-name="Ellipse 542" cx="6.039" cy="6.039" r="6.039" transform="translate(5.728 7.9)" fill="#fff"/>
+                          <path id="Path_18461" data-name="Path 18461" d="M65.294,55.889l-.638-2.7a.909.909,0,0,1,.295-.884l2.111-1.817a.861.861,0,0,0-.491-1.522l-2.75-.245a.944.944,0,0,1-.737-.54L62,45.627a.87.87,0,0,0-1.62,0L59.3,48.181a.944.944,0,0,1-.737.54l-2.8.245a.861.861,0,0,0-.491,1.522l2.111,1.817a.947.947,0,0,1,.295.884l-.638,2.7a.871.871,0,0,0,1.326.933L60.728,55.4a1.04,1.04,0,0,1,.933,0l2.357,1.424A.848.848,0,0,0,65.294,55.889Z" transform="translate(-26.718 -18.922)" fill="#fff"/>
+                          <path id="Path_18462" data-name="Path 18462" d="M49.271,71.766l-2.75-.246a.944.944,0,0,1-.737-.54l-1.129-2.553a.87.87,0,0,0-1.62,0l-1.08,2.553a.944.944,0,0,1-.737.54l-2.75.245a.861.861,0,0,0-.491,1.522l2.111,1.817a.947.947,0,0,1,.295.884l-.638,2.7a.871.871,0,0,0,1.326.933L43.428,78.2a1.04,1.04,0,0,1,.933,0l2.357,1.424a.887.887,0,0,0,1.326-.933l-.638-2.7a.909.909,0,0,1,.295-.884l2.111-1.817A.9.9,0,0,0,49.271,71.766Z" transform="translate(-17.912 -30.527)" fill="#fff"/>
+                          <path id="Path_18463" data-name="Path 18463" d="M84.362,73.288a.861.861,0,0,0-.491-1.522l-2.75-.246a.944.944,0,0,1-.737-.54l-1.129-2.553a.87.87,0,0,0-1.62,0l-1.08,2.553a.944.944,0,0,1-.737.54l-2.75.245a.861.861,0,0,0-.491,1.522l2.111,1.817a.947.947,0,0,1,.295.884l-.638,2.7a.871.871,0,0,0,1.326.933L78.028,78.2a1.04,1.04,0,0,1,.933,0l2.357,1.424a.887.887,0,0,0,1.326-.933l-.687-2.7a.909.909,0,0,1,.295-.884Z" transform="translate(-35.524 -30.527)" fill="#fff"/>
+                        </g>
+                      </svg>                    
+                    </div>
+                    <div>
+                      <h5 class="amount">25</h5>
+                      <h6>عاما من الخبرة</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="statistic">
+                    <div class="icon-content">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46">
+                        <path id="Icon_awesome-smile-beam" data-name="Icon awesome-smile-beam" d="M23,.563a23,23,0,1,0,23,23A23,23,0,0,0,23,.563ZM10.387,20.539c.306-3.9,2.986-6.622,5.194-6.622s4.887,2.717,5.194,6.622a.739.739,0,0,1-1.382.417l-.881-1.577a3.469,3.469,0,0,0-2.921-2,3.469,3.469,0,0,0-2.921,2l-.881,1.577a.75.75,0,0,1-1.4-.417Zm23.26,11.389a13.854,13.854,0,0,1-21.294,0,1.485,1.485,0,0,1,2.281-1.9,10.9,10.9,0,0,0,16.731,0A1.485,1.485,0,0,1,33.647,31.928Zm.575-10.971-.881-1.577a3.469,3.469,0,0,0-2.921-2,3.469,3.469,0,0,0-2.921,2l-.881,1.577a.741.741,0,0,1-1.382-.417c.306-3.9,2.986-6.622,5.194-6.622s4.887,2.717,5.194,6.622A.75.75,0,0,1,34.222,20.956Z" transform="translate(0 -0.563)" fill="#fff"/>
+                      </svg>                                        
+                    </div>
+                    <div>
+                      <h5 class="amount">5320</h5>
+                      <h6>العملاء السعداء</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="statistic">
+                    <div class="icon-content">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="36.848" height="40.533" viewBox="0 0 36.848 40.533">
+                        <g id="noun_Teacher_2899827" transform="translate(-6 -5)">
+                          <g id="Group_10403" data-name="Group 10403" transform="translate(6 5)">
+                            <path id="Path_18983" data-name="Path 18983" d="M15.212,14.212a9.212,9.212,0,1,1,9.212,9.212A9.212,9.212,0,0,1,15.212,14.212ZM27.851,37.648,24.424,27.4,21,37.648h0l3.427,3.445,3.427-3.427Zm.258-12.381h-.516l4.072,12.2a1.842,1.842,0,0,1-.405,2.008L25.2,45.533H41.006a1.842,1.842,0,0,0,1.842-1.842V40.006A14.739,14.739,0,0,0,28.109,25.267ZM17.589,39.472a1.842,1.842,0,0,1-.405-2.008l4.072-12.2h-.516A14.739,14.739,0,0,0,6,40.006v3.685a1.842,1.842,0,0,0,1.842,1.842H23.669Z" transform="translate(-6 -5)" fill="#fff"/>
+                          </g>
+                        </g>
+                      </svg>                                        
+                    </div>
+                    <div>
+                      <h5 class="amount">134</h5>
+                      <h6>قضايا تمت بنجاح</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact-us">
+      <div class="card-contact">
+        <div class="overlay">
+          <div class="title-content">
+            <h4 class="title-section title-double-line">تواصل معنا</h4>
+            <p class="section-description">
+              فريق دعم على مدار اليوم
+            </p>
+          </div>
+          <form class="custom-contact-form">
+            <div class="row">
+              <div class="col-md-6">
+                  <div class="input-g input-with-icon">
+                    <label for="userName">اسم المستخدم</label>
+                    <input type="text" name="userName" id="userName" class="form-control" placeholder="الإسم">
+                    <div class="input-icon">
+                      <svg id="iconfinder_2202250_account_avatar_human_man_profile_icon_1_" data-name="iconfinder_2202250_account_avatar_human_man_profile_icon(1)" xmlns="http://www.w3.org/2000/svg" width="24.467" height="24.467" viewBox="0 0 24.467 24.467">
+                        <path id="Path_23571" data-name="Path 23571" d="M18.673,15.346a6.673,6.673,0,1,1,6.673-6.673A6.692,6.692,0,0,1,18.673,15.346Zm0-12.233a5.561,5.561,0,1,0,5.561,5.561A5.577,5.577,0,0,0,18.673,3.112Z" transform="translate(-6.439 -2)" fill="gray"/>
+                        <path id="Path_23572" data-name="Path 23572" d="M9.229,28H19.238a7.214,7.214,0,0,1,7.229,7.229v2.78H25.355v-2.78a6.1,6.1,0,0,0-6.117-6.117H9.229a6.1,6.1,0,0,0-6.117,6.117v2.78H2v-2.78A7.214,7.214,0,0,1,9.229,28Z" transform="translate(-2 -13.542)" fill="gray"/>
+                      </svg>                      
+                    </div>
+                  </div>
+                  <div class="input-g input-with-icon">
+                    <label for="userEmail">البريد الإلكترونى</label>
+                    <input type="text" name="userEmail" id="userEmail" class="form-control" placeholder="البريد الاكتروني">
+                    <div class="input-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="26.101" height="17.702" viewBox="0 0 26.101 17.702">
+                        <g id="noun_Mail_1187871" transform="translate(-2.5 -17.8)">
+                          <g id="Group_16851" data-name="Group 16851" transform="translate(2.5 17.8)">
+                            <path id="Path_21413" data-name="Path 21413" d="M26.981,17.8H4.092A1.593,1.593,0,0,0,2.5,19.392V33.91A1.593,1.593,0,0,0,4.092,35.5H27.009A1.593,1.593,0,0,0,28.6,33.91V19.392A1.635,1.635,0,0,0,26.981,17.8Zm.549,16.083a.551.551,0,0,1-.549.549H4.092a.551.551,0,0,1-.549-.549V19.392a.551.551,0,0,1,.549-.549H27.009a.551.551,0,0,1,.549.549L27.53,33.883Z" transform="translate(-2.5 -17.8)" fill="grey"/>
+                            <path id="Path_21414" data-name="Path 21414" d="M31.831,37.205l-7.815-5.817,7.815-6.067a.531.531,0,0,0-.663-.831L21.062,32.33l-10.19-7.646a.534.534,0,0,0-.635.859l7.815,5.845-7.815,5.817a.557.557,0,0,0-.11.748.524.524,0,0,0,.414.222.415.415,0,0,0,.3-.111l8.063-6.011,1.823,1.385a.415.415,0,0,0,.3.111.53.53,0,0,0,.331-.111l1.767-1.357L31.2,38.092a.415.415,0,0,0,.3.111.486.486,0,0,0,.414-.222A.561.561,0,0,0,31.831,37.205Z" transform="translate(-8.023 -22.626)" fill="grey"/>
+                          </g>
+                        </g>
+                      </svg>                      
+                    </div>
+                  </div>
+                  <div class="input-g input-with-icon">
+                    <label for="userPhone">رقم الجوال</label>
+                    <input type="text" name="userPhone" id="userPhone" class="form-control" placeholder="رقم الجوال">
+                    <div class="input-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24.106" height="24.103" viewBox="0 0 24.106 24.103">
+                        <g id="noun_Phone_2640499" transform="translate(-9.689 -9.691)">
+                          <g id="Group_16850" data-name="Group 16850" transform="translate(9.689 9.691)">
+                            <path id="Path_21412" data-name="Path 21412" d="M32.626,27.511l-3.5-2.445a2.7,2.7,0,0,0-3.762.669L24.552,26.9a30.1,30.1,0,0,1-4.329-3.637,30.057,30.057,0,0,1-3.636-4.329l1.164-.812a2.7,2.7,0,0,0,.669-3.762l-2.445-3.5a2.7,2.7,0,0,0-2.207-1.168,2.534,2.534,0,0,0-.879.157,4.846,4.846,0,0,0-.91.447l-.483.34a3.664,3.664,0,0,0-.341.3A4.854,4.854,0,0,0,9.91,13.158C8.9,16.934,11.4,22.644,16.12,27.366c3.965,3.965,8.729,6.428,12.432,6.429h0a6.9,6.9,0,0,0,1.777-.219,4.854,4.854,0,0,0,2.218-1.244,3.675,3.675,0,0,0,.319-.361l.341-.486a4.866,4.866,0,0,0,.431-.886A2.659,2.659,0,0,0,32.626,27.511Zm0,2.711a3.792,3.792,0,0,1-.318.664L32,31.327a2.642,2.642,0,0,1-.216.241,3.793,3.793,0,0,1-1.732.964,5.841,5.841,0,0,1-1.5.183c-3.427,0-7.9-2.342-11.668-6.112-4.389-4.389-6.827-9.8-5.93-13.165a3.788,3.788,0,0,1,.964-1.733,2.687,2.687,0,0,1,.219-.2l.438-.309a3.74,3.74,0,0,1,.688-.333,1.455,1.455,0,0,1,.5-.09,1.623,1.623,0,0,1,1.321.706l2.444,3.5a1.618,1.618,0,0,1-.4,2.258L15.54,18.347a.54.54,0,0,0-.148.731,29.867,29.867,0,0,0,4.067,4.95,29.926,29.926,0,0,0,4.95,4.068.541.541,0,0,0,.73-.148l1.112-1.593a1.662,1.662,0,0,1,2.258-.4l3.5,2.445A1.579,1.579,0,0,1,32.624,30.223Z" transform="translate(-9.689 -9.691)" fill="gray"/>
+                          </g>
+                        </g>
+                      </svg>                      
+                    </div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-g">
+                  <label for="subject">الموضوع</label>
+                  <input type="text" name="subject" id="subject" class="form-control" placeholder="الموضوع">
+                </div>
+                <div class="input-g">
+                  <label for="userText">الرسالة</label>
+                  <textarea name="userText" id="userText" class="form-control" placeholder="اكتب هنا..."></textarea>
+                </div>
+            </div>
+            <div class="sub-btn col-12">
+              <button type="submit" class="btn primary-btn">إرسال</button>
+            </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="our-companies">
+      <div class="container">
+        <div class="img-content">
+          <div class="row">
+            <div class="col-6 col-md-4 col-lg-2"><img src="img/logo_1.png" alt="logo image"></div>
+            <div class="col-6 col-md-4 col-lg-2"><img src="img/logo_2.png" alt="logo image"></div>
+            <div class="col-6 col-md-4 col-lg-2"><img src="img/logo_3.png" alt="logo image"></div>
+            <div class="col-6 col-md-4 col-lg-2"><img src="img/logo_4.png" alt="logo image"></div>
+            <div class="col-6 col-md-4 col-lg-2"><img src="img/logo_5.png" alt="logo image"></div>
+            <div class="col-6 col-md-4 col-lg-2"><img src="img/logo_6.png" alt="logo image"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="overlay">
+        <div class="container border-between">
+          <div class="top-footer">
+            <div class="row">
+              <div class="col-lg-4 logo-section">
+                <a class="navbar-brand" href="index.html">
+                  <div class="logo-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="64" viewBox="0 0 80 64">
+                      <defs>
+                        <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 89 71">
+                          <image width="89" height="71" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFkAAABHCAYAAABs1+tEAAAACXBIWXMAAAsTAAALEwEAmpwYAAAF8WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNi4wLWMwMDIgNzkuMTY0NDg4LCAyMDIwLzA3LzEwLTIyOjA2OjUzICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjIuMCAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDIxLTA5LTAxVDIxOjI5OjMyKzAyOjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIxLTA5LTAxVDIxOjI5OjMyKzAyOjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMS0wOS0wMVQyMToyOTozMiswMjowMCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozMzJiNDBlZS05N2NkLTNhNDgtOWMxYy1hYjY3N2JkYzIyZjIiIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDphZTdmYmRjMy01ZTRkLWQ5NGItOTI2ZC1kM2NjODY0NWViMmYiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpjMzIzODk3My02MmNhLThjNDgtODc0Mi1kZmE5ODk3NzAyOTMiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiBwaG90b3Nob3A6SUNDUHJvZmlsZT0ic1JHQiBJRUM2MTk2Ni0yLjEiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmMzMjM4OTczLTYyY2EtOGM0OC04NzQyLWRmYTk4OTc3MDI5MyIgc3RFdnQ6d2hlbj0iMjAyMS0wOS0wMVQyMToyOTozMiswMjowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIyLjAgKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDozMzJiNDBlZS05N2NkLTNhNDgtOWMxYy1hYjY3N2JkYzIyZjIiIHN0RXZ0OndoZW49IjIwMjEtMDktMDFUMjE6Mjk6MzIrMDI6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyMi4wIChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5RuDjfAAAIgklEQVR4nO2cf4xdRRXHP1O2pSCVZilFXKGXSIVUQH60SqWCKMS91mIDYrDywwT/UEAJg8qPpAS0+APYqzaRQIrYGm0jClilTFEDBhsQiXQxmmJFmNK4RaFloSuU/tjnHzPPfcze9/bN3Dtv3272m7y8N3PvnJn97twz58w5cwUe0EpOAX7i02YcYl2SZqt8GnR4drAfcL5nm/GGbYAXyZMiDWQCNZgguQWYILkF8NXJeZgJvFKCnHbFMuCaIgLKIHkgSbO9JchpS2glXy0qY0Jd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"/>
+                        </pattern>
+                      </defs>
+                      <rect id="Untitled-1" width="80" height="64" fill="url(#pattern)"/>
+                    </svg>
+                    
+                  </div>
+                  <div class="logo-text">
+                    <h4 class="title">مستشارك الخاص</h4>
+                    <hr>
+                    <h6>عشرين عاما من الخبرة والتميز</h6>
+                  </div>
+                </a>
+                <p>
+                  مكتب حكم للمحاماة والاستشارات القانونية هو مكتب مؤسس وفق أنظمة المملكة العربية السعودية ويتمتع بسمعة طيبة واحترام كبير في القطاع المهني لرحلة تمتد عشرين عاماً.
+                </p>
+              </div>
+              <div class="col-lg-8 list-section">
+                <div class="row">
+                  <div class="col-6 col-lg-3 mb-3">
+                    <h3 class="title-list">العنوان</h3>
+                    <ul class="footer-list">
+                      <li>الرياض, شارع 88, برج الرياض</li>
+                      <li>الرئيسى, الدور العاشر</li>
+                    </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                    <h3 class="title-list">رقم الجوال</h3>
+                    <ul class="footer-list">
+                      <li>700 2249 012 +</li>
+                      <li>700 2249 012 +</li>
+                    </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                    <h3 class="title-list">البريد الألكترونى</h3>
+                    <ul class="footer-list">
+                      <li class="primary-email">Name 13145@jmail.com</li>
+                      <li>Name 13145@jmail.com</li>
+                    </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                    <h3 class="title-list">ساعات العمل</h3>
+                    <ul class="footer-list">
+                      <li>الأحد - الإثنين: 9.00 - 2.00</li>
+                      <li>الأربعاء - الخميس: 9.00 - 4.00</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bottom-footer">
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="list-inline social-media">
+                  <li class="list-inline-item"><a href="#">
+                    <svg id="google_1_" data-name="google(1)" xmlns="http://www.w3.org/2000/svg" width="16.969" height="16.969" viewBox="0 0 16.969 16.969">
+                      <path id="Path_17980" data-name="Path 17980" d="M251.037,198.007a8.546,8.546,0,0,0-.151-1.6.5.5,0,0,0-.493-.408H242.5a.5.5,0,0,0-.5.5v3.012a.5.5,0,0,0,.5.5h4.049a4.5,4.5,0,0,1-1.008,1.327l2.838,2.838A8.5,8.5,0,0,0,251.037,198.007Z" transform="translate(-234.069 -189.608)" fill="#dfdfdf"/>
+                      <path id="Path_17981" data-name="Path 17981" d="M51.737,4.017a4.474,4.474,0,0,1,2.709.905.5.5,0,0,0,.657-.047l2.143-2.143a.5.5,0,0,0-.032-.74,8.526,8.526,0,0,0-12.55,1.771L47.61,6.711A4.52,4.52,0,0,1,51.737,4.017Z" transform="translate(-43.168 0)" fill="#dfdfdf"/>
+                      <path id="Path_17982" data-name="Path 17982" d="M51.737,318.211a8.479,8.479,0,0,0,5.108-1.713l-2.891-2.891A4.5,4.5,0,0,1,47.61,311.5l-2.947,2.947A8.534,8.534,0,0,0,51.737,318.211Z" transform="translate(-43.168 -301.243)" fill="#dfdfdf"/>
+                      <path id="Path_17983" data-name="Path 17983" d="M4.09,144.868a3.613,3.613,0,0,1,0-1.446L.939,140.271a8.458,8.458,0,0,0,0,7.747Z" transform="translate(0 -135.66)" fill="#dfdfdf"/>
+                    </svg>                    
+                  </a></li>
+                  <li class="list-inline-item"><a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16.969" height="16.969" viewBox="0 0 16.969 16.969">
+                      <path id="Path_17975" data-name="Path 17975" d="M19.512,8.5H14.457A5.963,5.963,0,0,0,8.5,14.457v5.054a5.963,5.963,0,0,0,5.957,5.957h5.054a5.963,5.963,0,0,0,5.957-5.957V14.457A5.963,5.963,0,0,0,19.512,8.5ZM16.984,20.934a3.95,3.95,0,1,1,3.95-3.95,3.95,3.95,0,0,1-3.95,3.95Zm5.065-7.715a.659.659,0,0,1-.108.09.838.838,0,0,1-.126.065.569.569,0,0,1-.134.04.622.622,0,0,1-.141.014.792.792,0,0,1-.278-.054.8.8,0,0,1-.123-.065.884.884,0,0,1-.112-.09.73.73,0,0,1-.209-.513.622.622,0,0,1,.014-.141.57.57,0,0,1,.04-.134.834.834,0,0,1,.065-.126.9.9,0,0,1,.09-.108.875.875,0,0,1,.112-.09.792.792,0,0,1,.123-.065A.867.867,0,0,1,21.4,12a.723.723,0,0,1,.65.2.652.652,0,0,1,.09.108.854.854,0,0,1,.069.126.816.816,0,0,1,.04.134.931.931,0,0,1,.014.141.718.718,0,0,1-.213.513Zm-5.065.9a2.867,2.867,0,1,0,2.867,2.867A2.867,2.867,0,0,0,16.984,14.118Zm-.35,1.867a1.061,1.061,0,0,0-.711,1,.542.542,0,1,1-1.083,0,2.144,2.144,0,0,1,1.437-2.022.541.541,0,1,1,.357,1.022Z" transform="translate(-8.5 -8.5)" fill="#dfdfdf"/>
+                    </svg>                                        
+                  </a></li>
+                  <li class="list-inline-item"><a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                      <g id="Group_9140" data-name="Group 9140" transform="translate(0.063 -0.181)">
+                        <path id="Rectangle_2626" data-name="Rectangle 2626" width="20" height="20" transform="translate(-0.063 0.181)" fill="none"/>
+                        <path id="facebook_1_" data-name="facebook(1)" d="M13.123,2.817h1.549V.119A20,20,0,0,0,12.415,0C10.182,0,8.652,1.4,8.652,3.987V6.363H6.187V9.379H8.652v7.589h3.022V9.38h2.365l.375-3.016H11.673V4.286c0-.872.235-1.468,1.45-1.468Z" transform="translate(-0.29 1.697)" fill="#dfdfdf"/>
+                      </g>
+                    </svg>                                        
+                  </a></li>
+                  <li class="list-inline-item"><a href="#">
+                    <svg id="linkedin-logo" xmlns="http://www.w3.org/2000/svg" width="16.969" height="16.939" viewBox="0 0 16.969 16.939">
+                      <g id="Group_9138" data-name="Group 9138" transform="translate(0 0)">
+                        <path id="Path_17984" data-name="Path 17984" d="M2.018.08A2.018,2.018,0,1,0,4.035,2.1,2.018,2.018,0,0,0,2.018.08Z" transform="translate(0 -0.08)" fill="#dfdfdf"/>
+                        <rect id="Rectangle_2625" data-name="Rectangle 2625" width="3.48" height="11.197" transform="translate(0.278 5.742)" fill="#dfdfdf"/>
+                        <path id="Path_17985" data-name="Path 17985" d="M39.6,29.383A3.657,3.657,0,0,0,36.3,31.191h-.047v-1.53H32.92v11.2H36.4V35.319c0-1.46.278-2.875,2.089-2.875,1.785,0,1.808,1.67,1.808,2.969v5.446h3.478V34.717C43.772,31.7,43.122,29.383,39.6,29.383Z" transform="translate(-26.803 -23.919)" fill="#dfdfdf"/>
+                      </g>
+                    </svg>                                        
+                  </a></li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <div class="copyright">
+                جميع الحقوق محفوظة لموقع <span>مستشارك الخاص</span> 2021
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+</body>
+</html>
